@@ -3,31 +3,26 @@ import Image from "next/image";
 import React from "react";
 import { Card, CardHeader, CardTitle } from "../ui/card";
 
-export default function RecipeImageAndInfo() {
+export default function RecipeImageAndInfo({ data }) {
  return (
   <div className="lg:col-span-1">
    <div className="relative h-80 rounded-lg overflow-hidden mb-6">
-    <Image
-     src={"/images/img3.png"}
-     alt={"recipe image"}
-     fill
-     className="object-cover"
-    />
+    <Image src={data.img} alt={"recipe image"} fill className="object-cover" />
    </div>
 
    <div className="space-y-4">
     <div className="flex items-center gap-4 text-sm">
      <div className="flex items-center gap-1">
       <Clock className="h-4 w-4 text-muted-foreground" />
-      <span>30 minutes</span>
+      <span>{data.cookTime} minutes</span>
      </div>
      <div className="flex items-center gap-1">
       <Users className="h-4 w-4 text-muted-foreground" />
-      <span>4 servings</span>
+      <span>{data.servings} servings</span>
      </div>
      <div className="flex items-center gap-1">
       <ChefHat className="h-4 w-4 text-muted-foreground" />
-      <span>Asian</span>
+      <span>{data.category}</span>
      </div>
     </div>
     <Card className={"border-0 bg-brown-ni-carmel"}>
@@ -35,7 +30,7 @@ export default function RecipeImageAndInfo() {
       <CardTitle className={"text-accent"}>
        Keyword:{" "}
        <span className="font-medium" style={{ fontStyle: "italic" }}>
-        Pork, Sizzling, Filipino
+        {data.tags}
        </span>
       </CardTitle>
      </CardHeader>

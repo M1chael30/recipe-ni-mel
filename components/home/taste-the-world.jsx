@@ -1,10 +1,9 @@
 import React from "react";
 import Title from "../title";
 import Subtite from "../subtitle";
-import { tasteTheWorld } from "@/lib/data";
 import { TasteTheWorldCard } from "./home-cards";
 
-export default function TasteTheWorld() {
+export default function TasteTheWorld({ data }) {
  return (
   <section className="px-8 py-4 space-y-4">
    {/* title */}
@@ -18,8 +17,8 @@ export default function TasteTheWorld() {
 
    {/* content */}
    <div className="grid auto-rows-min gap-4 md:grid-cols-5">
-    {tasteTheWorld.length &&
-     tasteTheWorld.map((item, i) => <TasteTheWorldCard data={item} key={i} />)}
+    {data.length &&
+     data.map((item, i) => <TasteTheWorldCard data={item} key={i} />)}
    </div>
   </section>
  );

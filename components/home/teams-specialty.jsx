@@ -1,10 +1,8 @@
-import { teamsSpecialty } from "@/lib/data";
 import Title from "../title";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import Image from "next/image";
+
 import { TeamsSpecialtyCard } from "./home-cards";
 
-export default function TeamsSpecialty() {
+export default function TeamsSpecialty({ data }) {
  return (
   <section className="w-full relative bg-cover bg-center bg-[url('/images/img2.jpg')]">
    {/* bg color */}
@@ -19,10 +17,8 @@ export default function TeamsSpecialty() {
 
     {/* card content */}
     <div className="grid auto-rows-min gap-4 md:grid-cols-5">
-     {teamsSpecialty.length &&
-      teamsSpecialty.map((item, i) => (
-       <TeamsSpecialtyCard data={item} key={i} />
-      ))}
+     {data.length &&
+      data.map((item, i) => <TeamsSpecialtyCard data={item} key={i} />)}
     </div>
    </div>
   </section>

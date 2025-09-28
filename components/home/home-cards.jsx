@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Title from "../title";
 import { Card, CardContent, CardFooter } from "../ui/card";
+import Link from "next/link";
 
 function TasteTheWorldCard({ data, ...props }) {
  return (
@@ -22,17 +23,19 @@ function TasteTheWorldCard({ data, ...props }) {
 
 function TeamsSpecialtyCard({ data, ...props }) {
  return (
-  <Card
-   {...props}
-   className="bg-background-ni-carmel border-0 aspect-square transition-all duration-200 hover:shadow-lg hover:-translate-y-1 cursor-pointer"
-  >
-   <CardContent>
-    <Image src={data.img} alt={data.name} width={320} height={320} />
-   </CardContent>
-   <CardFooter className={"justify-center"}>
-    <p className="font-bold">{data.name}</p>
-   </CardFooter>
-  </Card>
+  <Link href={`/teams-specialty/${data.id}`}>
+   <Card
+    {...props}
+    className="bg-background-ni-carmel border-0 aspect-square transition-all duration-200 hover:shadow-lg hover:-translate-y-1 cursor-pointer"
+   >
+    <CardContent>
+     <Image src={data.img} alt={data.name} width={320} height={320} />
+    </CardContent>
+    <CardFooter className={"justify-center"}>
+     <p className="font-bold">{data.name}</p>
+    </CardFooter>
+   </Card>
+  </Link>
  );
 }
 
