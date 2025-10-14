@@ -20,20 +20,20 @@ export default function HeroSection() {
    </div>
 
    {/* right side */}
-   <div className="space-y-3 mx-10">
+   <div className="space-y-3 mx-5 md:mx-10">
     {/* title */}
-    <div className="flex flex-col items-end">
-     <Title className="title text-7xl">
+    <div className="flex flex-col md:items-end">
+     <Title className="title text-5xl lg:text-7xl">
       Good <span className="text-orange-ni-carmel">Food</span>
      </Title>
-     <Title className="title text-7xl">
+     <Title className="title text-5xl lg:text-7xl">
       Good <span className="text-orange-ni-carmel">Company</span>
      </Title>
     </div>
 
     {/* subtitle */}
     <div className="space-y-5 flex flex-col items-end">
-     <Subtitle>
+     <Subtitle className="text-xs md:text-sm">
       Every recipe brings people together, turning every meal into a memorable
       moment.
      </Subtitle>

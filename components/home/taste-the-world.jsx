@@ -16,7 +16,7 @@ export default function TasteTheWorld({ data }) {
    </div>
 
    {/* content */}
-   <div className="grid auto-rows-min gap-4 md:grid-cols-5">
+   <div className="grid auto-rows-min gap-4 sm:grid-cols-3 lg:grid-cols-5">
     {data && data.map((item, i) => <TasteTheWorldCard data={item} key={i} />)}
    </div>
   </section>

@@ -29,8 +29,8 @@ function TeamsSpecialtyCard({ data, ...props }) {
     {...props}
     className="bg-background-ni-carmel border-0 aspect-square transition-all duration-200 hover:shadow-lg hover:-translate-y-1 cursor-pointer"
    >
-    <CardContent>
-     <Image src={data.img} alt={data.name} width={320} height={320} />
+    <CardContent className="flex items-center">
+     <Image src={data.img} alt={data.name} width={420} height={420} />
     </CardContent>
     <CardFooter className={"justify-center"}>
      <p className="font-bold">{data.name}</p>
