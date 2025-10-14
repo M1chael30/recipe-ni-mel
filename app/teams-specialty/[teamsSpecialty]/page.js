@@ -1,8 +1,9 @@
 "use client";
 
-import RecipeContent from "@/components/teams-specialty-info/recipe-content";
-import RecipeImageAndInfo from "@/components/teams-specialty-info/recipe-image-and-info";
+import RecipeContent from "@/components/recipe-content";
+import RecipeInfo from "@/components/recipe-info";
 import Title from "@/components/title";
+
 import { Button } from "@/components/ui/button";
 import { teamsSpecialty } from "@/lib/data";
 import { Heart } from "lucide-react";
@@ -31,7 +32,7 @@ export default function TeamsSpecialtyInfo() {
    {/* content */}
    <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
     {/* recipe image and info */}
-    <RecipeImageAndInfo data={teamsSpecialtyInfo} />
+    <RecipeInfo data={teamsSpecialtyInfo} />
 
     {/* Recipe Content */}
     <RecipeContent />

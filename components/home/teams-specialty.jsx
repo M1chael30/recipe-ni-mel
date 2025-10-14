@@ -17,8 +17,7 @@ export default function TeamsSpecialty({ data }) {
 
     {/* card content */}
     <div className="grid auto-rows-min gap-4 md:grid-cols-5">
-     {data.length &&
-      data.map((item, i) => <TeamsSpecialtyCard data={item} key={i} />)}
+     {data && data.map((item, i) => <TeamsSpecialtyCard data={item} key={i} />)}
     </div>
    </div>
   </section>

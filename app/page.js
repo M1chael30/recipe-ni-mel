@@ -1,4 +1,3 @@
-import Footer from "@/components/footer";
 import {
  HeroSection,
  TeamsSpecialty,
@@ -14,8 +13,6 @@ export default function Home() {
     <TeamsSpecialty data={teamsSpecialty} />
     <TasteTheWorld data={tasteTheWorld} />
    </section>
-   {/* footer */}
-   <Footer />
   </>
  );
 }

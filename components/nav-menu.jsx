@@ -1,8 +1,9 @@
 "use client";
 
+import Link from "next/link";
+
 import { cn } from "@/lib/utils";
 import { ChefHat, Heart } from "lucide-react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "./ui/button";
 

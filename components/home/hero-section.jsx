@@ -1,8 +1,9 @@
-import Subtite from "@/components/subtitle";
+import Subtitle from "@/components/subtitle";
 import Title from "@/components/title";
+import Image from "next/image";
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 
 export default function HeroSection() {
  return (
@@ -32,10 +33,10 @@ export default function HeroSection() {
 
     {/* subtitle */}
     <div className="space-y-5 flex flex-col items-end">
-     <Subtite>
+     <Subtitle>
       Every recipe brings people together, turning every meal into a memorable
       moment.
-     </Subtite>
+     </Subtitle>
      <Button variant="orangeNiCarmel">
       Explore Now
       <ArrowRight />

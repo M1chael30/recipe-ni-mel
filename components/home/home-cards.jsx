@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Title from "../title";
-import { Card, CardContent, CardFooter } from "../ui/card";
 import Link from "next/link";
+
+import { Card, CardContent, CardFooter } from "../ui/card";
 
 function TasteTheWorldCard({ data, ...props }) {
  return (
