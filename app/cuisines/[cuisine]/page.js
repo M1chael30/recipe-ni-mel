@@ -1,9 +1,22 @@
+"use client";
+
 import CuisineCard from "@/components/cuisine-cards";
 import Subtitle from "@/components/subtitle";
 import Title from "@/components/title";
 import Link from "next/link";
 
+import { filipinoCuisines } from "@/lib/data";
+import { usePathname } from "next/navigation";
+
 export default function Cuisine() {
+ const pathName = usePathname();
+
+ let data = [];
+
+ if (pathName === "/cuisines/filipio") {
+  data = filipinoCuisines;
+ }
+
  return (
   <section className="space-y-5">
    {/* title */}
@@ -22,13 +35,13 @@ export default function Cuisine() {
    {/* cuisine card */}
    <div className="grid auto-rows-min grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
     {/* dito mag mamap */}
-    {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
+    {data.map((item) => (
      <Link
       href={"/"}
-      key={index}
+      key={item.id}
       className="hover:shadow-xl hover:-translate-y-1 duration-300"
      >
-      <CuisineCard />
+      <CuisineCard item={item} />
      </Link>
     ))}
    </div>

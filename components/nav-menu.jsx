@@ -5,7 +5,15 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ChefHat, Heart } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { Button } from "./ui/button";
+
+import CuisinesDropdown from "./cuisines-dropdown";
+
+const cuisineLinks = [
+ {
+  title: "Filipino",
+  url: "/cuisines/filipio",
+ },
+];
 
 export default function NavMenu() {
  const urlPath = usePathname();
@@ -27,12 +35,7 @@ export default function NavMenu() {
        </Link>
       </li>
       <li>
-       <Button
-        className={"hover:bg-background-ni-carmel text-md"}
-        variant={"ghost"}
-       >
-        Cuisine
-       </Button>
+       <CuisinesDropdown links={cuisineLinks} />
       </li>
       <li>
        <Link
