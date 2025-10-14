@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
  return (
   <html lang="en">
    <body
-    className={`${poppins.className} ${legquinne.variable} bg-background-ni-carmel antialiased`}
+    className={`${poppins.className} ${legquinne.variable} bg-background-ni-carmel antialiased selection:bg-orange-ni-carmel selection:text-background-ni-carmel`}
    >
     {/* nav */}
     <NavMenu />
