@@ -5,7 +5,7 @@ import Subtitle from "@/components/subtitle";
 import Title from "@/components/title";
 import Link from "next/link";
 
-import { filipinoCuisines } from "@/lib/data";
+import { americanCuisines, chineseCuisines, filipinoCuisines, italianCuisines, veganCuisines } from "@/lib/data";
 import { usePathname } from "next/navigation";
 
 export default function Cuisine() {
@@ -19,6 +19,22 @@ export default function Cuisine() {
   data = filipinoCuisines.recipes;
   title = filipinoCuisines.title;
   description = filipinoCuisines.description;
+ }else if (pathName === "/cuisines/american") {
+  data = americanCuisines.recipes;
+  title = americanCuisines.title;
+  description = americanCuisines.description;
+ } else if (pathName === "/cuisines/chinese") {
+  data = chineseCuisines.recipes;
+  title = chineseCuisines.title;
+  description = chineseCuisines.description;
+ } else if (pathName === "/cuisines/italian") {
+  data = italianCuisines.recipes;
+  title = italianCuisines.title;
+  description = italianCuisines.description;
+ } else if (pathName === "/cuisines/vegan") {
+  data = veganCuisines.recipes;
+  title = veganCuisines.title;
+  description = veganCuisines.description;
  }
 
  return (
