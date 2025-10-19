@@ -9,9 +9,26 @@ import { usePathname } from "next/navigation";
 import CuisinesDropdown from "./cuisines-dropdown";
 
 const cuisineLinks = [
+{
+  title: "Italian",
+  url: "/cuisines/italian",
+ },
+
  {
   title: "Filipino",
   url: "/cuisines/filipino",
+ },
+{
+  title: "Chinese",
+  url: "/cuisines/chinese",
+ },
+  {
+  title: "American",
+  url: "/cuisines/american",
+ },
+{
+  title: "Vegan",
+  url: "/cuisines/vegan",
  },
 ];
 

@@ -5,31 +5,45 @@ import Subtitle from "@/components/subtitle";
 import Title from "@/components/title";
 import Link from "next/link";
 
-import { filipinoCuisines } from "@/lib/data";
+import { americanCuisines, chineseCuisines, filipinoCuisines, italianCuisines, veganCuisines } from "@/lib/data";
 import { usePathname } from "next/navigation";
 
 export default function Cuisine() {
  const pathName = usePathname();
 
  let data = [];
+ let title = "",
+  description = "";
 
  if (pathName === "/cuisines/filipino") {
-  data = filipinoCuisines;
+  data = filipinoCuisines.recipes;
+  title = filipinoCuisines.title;
+  description = filipinoCuisines.description;
+ }else if (pathName === "/cuisines/american") {
+  data = americanCuisines.recipes;
+  title = americanCuisines.title;
+  description = americanCuisines.description;
+ } else if (pathName === "/cuisines/chinese") {
+  data = chineseCuisines.recipes;
+  title = chineseCuisines.title;
+  description = chineseCuisines.description;
+ } else if (pathName === "/cuisines/italian") {
+  data = italianCuisines.recipes;
+  title = italianCuisines.title;
+  description = italianCuisines.description;
+ } else if (pathName === "/cuisines/vegan") {
+  data = veganCuisines.recipes;
+  title = veganCuisines.title;
+  description = veganCuisines.description;
  }
 
  return (
   <section className="space-y-5">
    {/* title */}
    <div className="space-y-3">
-    <Title className="title text-7xl tracking-wide">Filipino</Title>
+    <Title className="title text-7xl tracking-wide">{title}</Title>
 
-    <Subtitle>
-     Filipino cuisine is a comforting reflection of home, filled with flavors
-     that remind us of family and tradition. From savory stews to crispy
-     delights, each dish carries the essence of Filipino culture. Dive into our
-     collection of Filipino favorites, guaranteed to bring back memories of
-     home-cooked meals and the warm embrace of your loved ones.
-    </Subtitle>
+    <Subtitle>{description}</Subtitle>
    </div>
 
    {/* cuisine card */}
