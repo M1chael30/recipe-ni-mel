@@ -33,7 +33,7 @@ export default function HeroSection() {
 
     {/* subtitle */}
     <div className="space-y-5 flex flex-col items-end">
-     <Subtitle className="text-xs md:text-sm">
+     <Subtitle className="md:text-sm">
       Every recipe brings people together, turning every meal into a memorable
       moment.
      </Subtitle>

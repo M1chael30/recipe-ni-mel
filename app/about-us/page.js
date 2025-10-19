@@ -1,5 +1,7 @@
 import Subtitle from "@/components/subtitle";
 import Title from "@/components/title";
+// import Image from "next/image";
+// import MyProfile from "../../public/my_profile.jpg";
 
 export default function AboutUs() {
  return (
@@ -14,6 +16,24 @@ export default function AboutUs() {
      making your cooking journey as fun and easy as possible.
     </Subtitle>
    </div>
+
+   {/* <div
+    className={
+     "relative flex size-40 shrink-0 overflow-hidden rounded-lg shadow-lg cursor-pointer"
+    }
+   >
+    <Image
+     priority
+     alt="my profile"
+     src={MyProfile}
+     className="absolute inset-0 object-cover aspect-square size-full"
+    />
+    <img
+     alt="my profile"
+     src={"/my_profile2.jpg"}
+     className="absolute inset-0 aspect-square size-full object-cover hover:opacity-0 transition-opacity"
+    />
+   </div> */}
 
    {/*content */}
    <div className="grid auto-rows-min gap-4 md:grid-cols-5">

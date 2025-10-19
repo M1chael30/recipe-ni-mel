@@ -8,7 +8,7 @@ import { teamsSpecialty, tasteTheWorld } from "@/lib/data";
 export default function Home() {
  return (
   <>
-   <section className="space-y-10">
+   <section className="space-y-10 min-h-screen">
     <HeroSection />
     <TeamsSpecialty data={teamsSpecialty} />
     <TasteTheWorld data={tasteTheWorld} />

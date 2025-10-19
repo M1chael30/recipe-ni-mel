@@ -39,7 +39,7 @@ export default function Cuisine() {
      <Link
       href={"/"}
       key={item.id}
-      className="hover:shadow-xl hover:-translate-y-1 duration-300"
+      className="hover:-translate-y-1 duration-300"
      >
       <CuisineCard item={item} />
      </Link>
