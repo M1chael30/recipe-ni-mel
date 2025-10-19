@@ -1,5 +1,4 @@
 import Liempo from "../public/images/img5.jpg";
-import Image from "next/image";
 import Subtitle from "./subtitle";
 
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -11,8 +10,8 @@ export default function CuisineCard({ item = {} }) {
   <Card className="bg-background-ni-carmel shadow-lg pt-0 gap-2 overflow-hidden">
    <CardHeader className="p-0">
     {/* image */}
-    <Image
-     src={item.image || Liempo}
+    <img
+     src={item.img || Liempo}
      alt={item.name}
      className="aspect-video object-cover object-center"
     />
