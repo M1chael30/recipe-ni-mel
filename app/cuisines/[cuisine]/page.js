@@ -12,24 +12,22 @@ export default function Cuisine() {
  const pathName = usePathname();
 
  let data = [];
+ let title = "",
+  description = "";
 
  if (pathName === "/cuisines/filipino") {
-  data = filipinoCuisines;
+  data = filipinoCuisines.recipes;
+  title = filipinoCuisines.title;
+  description = filipinoCuisines.description;
  }
 
  return (
   <section className="space-y-5">
    {/* title */}
    <div className="space-y-3">
-    <Title className="title text-7xl tracking-wide">Filipino</Title>
+    <Title className="title text-7xl tracking-wide">{title}</Title>
 
-    <Subtitle>
-     Filipino cuisine is a comforting reflection of home, filled with flavors
-     that remind us of family and tradition. From savory stews to crispy
-     delights, each dish carries the essence of Filipino culture. Dive into our
-     collection of Filipino favorites, guaranteed to bring back memories of
-     home-cooked meals and the warm embrace of your loved ones.
-    </Subtitle>
+    <Subtitle>{description}</Subtitle>
    </div>
 
    {/* cuisine card */}
