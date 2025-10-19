@@ -11,7 +11,7 @@ import CuisinesDropdown from "./cuisines-dropdown";
 const cuisineLinks = [
  {
   title: "Filipino",
-  url: "/cuisines/filipio",
+  url: "/cuisines/filipino",
  },
 ];
 

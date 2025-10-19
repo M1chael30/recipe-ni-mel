@@ -21,8 +21,7 @@ export default function CuisinesDropdown({ links = [] }) {
     </Button>
    </DropdownMenuTrigger>
    <DropdownMenuContent>
-    <DropdownMenuLabel>Famous Cuisines</DropdownMenuLabel>
-    <DropdownMenuSeparator />
+    
     {links &&
      links.map((link) => (
       <DropdownMenuItem key={link.title}>

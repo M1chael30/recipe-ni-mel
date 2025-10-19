@@ -13,7 +13,7 @@ export default function Cuisine() {
 
  let data = [];
 
- if (pathName === "/cuisines/filipio") {
+ if (pathName === "/cuisines/filipino") {
   data = filipinoCuisines;
  }
 
