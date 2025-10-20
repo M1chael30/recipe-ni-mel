@@ -1,9 +1,9 @@
-import Liempo from "../public/images/img5.jpg";
 import Subtitle from "./subtitle";
 
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Timer, Utensils } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export default function CuisineCard({ item = {} }) {
  return (
@@ -11,7 +11,7 @@ export default function CuisineCard({ item = {} }) {
    <CardHeader className="p-0">
     {/* image */}
     <img
-     src={item.img || Liempo}
+     src={item.img}
      alt={item.name}
      className="aspect-video object-cover object-center"
     />
@@ -33,7 +33,12 @@ export default function CuisineCard({ item = {} }) {
     <div className="flex items-end flex-col">
      <Badge
       variant="secondary"
-      className="bg-[#C1F7CA] text-[#27B11D] font-bold tracking-wide px-8"
+      className={cn(
+       "font-bold tracking-wide px-8",
+       item.difficulty === "Easy" && "bg-[#C1F7CA] text-[#27B11D]",
+       item.difficulty === "Medium" && "bg-[#f5f29e] text-[#f7aa46]",
+       item.difficulty === "Hard" && "bg-[#F7C1C1] text-[#EC4D42]"
+      )}
      >
       {item.difficulty}
      </Badge>
