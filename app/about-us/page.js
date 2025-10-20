@@ -10,11 +10,9 @@ export default function AboutUs() {
 
    {/*content */}
    <div className="grid auto-rows-min gap-4 md:grid-cols-5">
-    <HoverCardProfile item={teamData[0]} />
-    <HoverCardProfile />
-    <HoverCardProfile />
-    <HoverCardProfile />
-    <HoverCardProfile />
+    {teamData.map((item) => (
+     <HoverCardProfile key={item.name} item={item} />
+    ))}
    </div>
   </section>
  );
