@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
-export default function RecipeContent() {
+export default function RecipeContent({ ingredients = [], instructions = [] }) {
  return (
   <div className="lg:col-span-2 space-y-8">
    {/* Ingredients */}
@@ -8,7 +8,11 @@ export default function RecipeContent() {
     <CardHeader>
      <CardTitle className="text-xl">Ingredients</CardTitle>
     </CardHeader>
-    <CardContent>lalagyan pa</CardContent>
+    <CardContent>
+     <ul className="list-disc pl-10">
+      {ingredients && ingredients.map((item) => <li key={item}>{item}</li>)}
+     </ul>
+    </CardContent>
    </Card>
 
    {/* Instructions */}
@@ -16,7 +20,12 @@ export default function RecipeContent() {
     <CardHeader>
      <CardTitle className="text-xl">Instructions</CardTitle>
     </CardHeader>
-    <CardContent>lalagyan pa</CardContent>
+    <CardContent>
+     {" "}
+     <ul className="list-decimal pl-10">
+      {instructions && instructions.map((item) => <li key={item}>{item}</li>)}
+     </ul>
+    </CardContent>
    </Card>
   </div>
  );

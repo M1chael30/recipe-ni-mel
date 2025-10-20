@@ -2,9 +2,6 @@ import Subtitle from "@/components/subtitle";
 import Title from "@/components/title";
 import Image from "next/image";
 
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-
 export default function HeroSection() {
  return (
   <section className="flex items-center justify-between">
@@ -37,10 +34,6 @@ export default function HeroSection() {
       Every recipe brings people together, turning every meal into a memorable
       moment.
      </Subtitle>
-     <Button variant="orangeNiCarmel">
-      Explore Now
-      <ArrowRight />
-     </Button>
     </div>
    </div>
   </section>

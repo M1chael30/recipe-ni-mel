@@ -35,7 +35,10 @@ export default function TeamsSpecialtyInfo() {
     <RecipeInfo data={teamsSpecialtyInfo} />
 
     {/* Recipe Content */}
-    <RecipeContent />
+    <RecipeContent
+     ingredients={teamsSpecialtyInfo.ingredients}
+     instructions={teamsSpecialtyInfo.instructions}
+    />
    </div>
   </section>
  );

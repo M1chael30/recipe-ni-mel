@@ -5,33 +5,39 @@ import Subtitle from "@/components/subtitle";
 import Title from "@/components/title";
 import Link from "next/link";
 
-import { americanCuisines, chineseCuisines, filipinoCuisines, italianCuisines, veganCuisines } from "@/lib/data";
-import { usePathname } from "next/navigation";
+import {
+ americanCuisines,
+ chineseCuisines,
+ filipinoCuisines,
+ italianCuisines,
+ veganCuisines,
+} from "@/lib/data";
+import { useParams } from "next/navigation";
 
 export default function Cuisine() {
- const pathName = usePathname();
+ const params = useParams();
 
  let data = [];
  let title = "",
   description = "";
 
- if (pathName === "/cuisines/filipino") {
+ if (params.cuisine === "filipino") {
   data = filipinoCuisines.recipes;
   title = filipinoCuisines.title;
   description = filipinoCuisines.description;
- }else if (pathName === "/cuisines/american") {
+ } else if (params.cuisine === "american") {
   data = americanCuisines.recipes;
   title = americanCuisines.title;
   description = americanCuisines.description;
- } else if (pathName === "/cuisines/chinese") {
+ } else if (params.cuisine === "chinese") {
   data = chineseCuisines.recipes;
   title = chineseCuisines.title;
   description = chineseCuisines.description;
- } else if (pathName === "/cuisines/italian") {
+ } else if (params.cuisine === "italian") {
   data = italianCuisines.recipes;
   title = italianCuisines.title;
   description = italianCuisines.description;
- } else if (pathName === "/cuisines/vegan") {
+ } else if (params.cuisine === "vegan") {
   data = veganCuisines.recipes;
   title = veganCuisines.title;
   description = veganCuisines.description;
@@ -51,7 +57,7 @@ export default function Cuisine() {
     {/* dito mag mamap */}
     {data.map((item) => (
      <Link
-      href={"/"}
+      href={`/cuisines/${params.cuisine}/${item.id}`}
       key={item.id}
       className="hover:-translate-y-1 duration-300"
      >

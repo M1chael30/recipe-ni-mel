@@ -2,12 +2,17 @@ import Image from "next/image";
 import { ChefHat, Clock, Users } from "lucide-react";
 import { Card, CardHeader, CardTitle } from "./ui/card";
 
-export default function RecipeInfo({ data }) {
+export default function RecipeInfo({ data = {} }) {
  return (
   <div className="lg:col-span-1">
    {/* image */}
    <div className="relative h-80 rounded-lg overflow-hidden mb-6">
-    <Image src={data.img} alt={"recipe image"} fill className="object-cover" />
+    <Image
+     src={data.img2 ? data.img2 : data.img}
+     alt={"recipe image"}
+     fill
+     className="object-cover"
+    />
    </div>
 
    <div className="space-y-4">
