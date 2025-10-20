@@ -22,9 +22,9 @@ export default function RecipeContent({ ingredients = [], instructions = [] }) {
     </CardHeader>
     <CardContent>
      {" "}
-     <ul className="list-decimal pl-10">
-      {instructions && instructions.map((item) => <li key={item}>{item}</li>)}
-     </ul>
+     <ol className="px-10  ">
+      {instructions && instructions.map((item, index) => <li key={item}>{index+1}. {item}</li>)}
+     </ol>
     </CardContent>
    </Card>
   </div>
