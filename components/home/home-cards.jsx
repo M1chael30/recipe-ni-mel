@@ -33,7 +33,7 @@ function TeamsSpecialtyCard({ data, ...props }) {
      <Image src={data.img} alt={data.name} width={420} height={420} />
     </CardContent>
     <CardFooter className={"justify-center"}>
-     <p className="font-bold">{data.name}</p>
+     <p className="font-bold text-sm">{data.name}</p>
     </CardFooter>
    </Card>
   </Link>
