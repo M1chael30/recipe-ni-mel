@@ -9,66 +9,64 @@ import { usePathname } from "next/navigation";
 import CuisinesDropdown from "./cuisines-dropdown";
 
 const cuisineLinks = [
-{
-  title: "Italian",
-  url: "/cuisines/italian",
- },
-
- {
-  title: "Filipino",
-  url: "/cuisines/filipino",
- },
-{
-  title: "Chinese",
-  url: "/cuisines/chinese",
- },
   {
-  title: "American",
-  url: "/cuisines/american",
- },
-{
-  title: "Vegan",
-  url: "/cuisines/vegan",
- },
+    title: "Italian",
+    url: "/cuisines/italian",
+  },
+
+  {
+    title: "Filipino",
+    url: "/cuisines/filipino",
+  },
+  {
+    title: "Chinese",
+    url: "/cuisines/chinese",
+  },
+  {
+    title: "American",
+    url: "/cuisines/american",
+  },
+  {
+    title: "Vegan",
+    url: "/cuisines/vegan",
+  },
 ];
 
 export default function NavMenu() {
- const urlPath = usePathname();
+  const urlPath = usePathname();
 
- return (
-  <header className="py-4 mx-10">
-   <div className="flex justify-between mx-auto items-center">
-    <Link href="/">
-     <ChefHat className="size-8 text-orange-ni-carmel" />
-    </Link>
-    <nav>
-     <ul className="flex gap-10 items-center">
-      <li>
-       <Link
-        href="/"
-        className={cn(urlPath === "/" && "text-orange-ni-carmel")}
-       >
-        Home
-       </Link>
-      </li>
-      <li>
-       <CuisinesDropdown links={cuisineLinks} />
-      </li>
-      <li>
-       <Link
-        href="/about-us"
-        className={cn(urlPath === "/about-us" && "text-orange-ni-carmel")}
-       >
-        About Us
-       </Link>
-      </li>
-     </ul>
-    </nav>
+  return (
+    <header className="py-4 mx-10">
+      <div className="flex justify-between mx-auto items-center">
+        <Link href="/">
+          <ChefHat className="size-8 text-orange-ni-carmel" />
+        </Link>
+        <nav>
+          <ul className="flex gap-10 items-center">
+            <li>
+              <Link
+                href="/"
+                className={cn(urlPath === "/" && "text-orange-ni-carmel")}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <CuisinesDropdown links={cuisineLinks} />
+            </li>
+            <li>
+              <Link
+                href="/about-us"
+                className={cn(urlPath === "/about-us" && "text-orange-ni-carmel")}
+              >
+                About Us
+              </Link>
+            </li>
+          </ul>
+        </nav>
 
-    <div className="">
-     <Heart className="size-8 text-orange-ni-carmel" />
-    </div>
-   </div>
-  </header>
- );
+        <div className="" />
+      </div>
+    </header>
+  );
 }
