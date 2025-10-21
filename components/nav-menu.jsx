@@ -38,9 +38,9 @@ export default function NavMenu() {
  return (
   <header className="py-4 mx-10">
    <div className="flex justify-between mx-auto items-center">
-    <div className="">
+    <Link href="/">
      <ChefHat className="size-8 text-orange-ni-carmel" />
-    </div>
+    </Link>
     <nav>
      <ul className="flex gap-10 items-center">
       <li>
